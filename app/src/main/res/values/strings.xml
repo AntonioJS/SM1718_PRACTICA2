@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SM1718_PRACTICA2</string>
+    <string name="app_name">Inicio de sesión.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -11,4 +11,6 @@
     <string name="fragment_login_port">Puerto</string>
     <string name="fragment_login_button">Connect</string>
     <string name="service_title">ACTIVIDAD 2</string>
+    <string name="fragment_login_password">password</string>
+    <string name="fragment_login_password2">Password</string>
 </resources>

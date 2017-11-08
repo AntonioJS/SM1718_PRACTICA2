@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="es.ujaen.git.sm1718_practica2">
 
@@ -9,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="es.ujaen.git.sm1718_practica2.MainActivity">
+            <!--- Dado que vamos a realizar peticiones HTTP, necesitamos añadir permisos.-->
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <!---Añadimos recursos para el color. Azul para los primarios y verde para los acentos.-->
+            <resources>
+                <color android:name="colorPrimary">#7FD3FA</color>
+                <color android:name="colorPrimaryDark">#7FD3FA</color>
+                <color android:name="colorAccent">#98D743</color>
+            </resources>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

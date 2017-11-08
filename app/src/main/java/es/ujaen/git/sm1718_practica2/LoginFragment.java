@@ -23,8 +23,11 @@ import android.widget.Toast;
 public class LoginFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    //Creak0smlas credenciales que nos permitan saber si nuestro algoritmo sirve.
     private static final String ARG_PARAM1 = "param_ip";
     private static final String ARG_PARAM2 = "param_port";
+    private static final String DUMMY_USER_ID = "000000";
+    private static final String DUMMY_PASSWORD = "123456";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -71,26 +74,24 @@ public class LoginFragment extends Fragment {
         Button connect = (Button) fragment.findViewById(R.id.button_login);
         final EditText user = (EditText) fragment.findViewById(R.id.editText_login_user);
         final EditText pass = (EditText) fragment.findViewById(R.id.editText_login_pass);
-        final EditText ip = (EditText) fragment.findViewById(R.id.editText_login_ip);
-        final EditText port = (EditText) fragment.findViewById(R.id.editText_login_port);
+        //final EditText ip = (EditText) fragment.findViewById(R.id.editText_login_ip);
+        //final EditText port = (EditText) fragment.findViewById(R.id.editText_login_port);
 
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String s_user = user.getText().toString();
                 String s_pass = pass.getText().toString();
-                String s_ip = ip.getText().toString();
-                String s_port = port.getText().toString();
+                //String s_ip = ip.getText().toString();
+                //String s_port = port.getText().toString();
                 short port2 = 0;
-                try {
-                    port2 = Short.parseShort(s_port);
-                } catch (java.lang.NumberFormatException ex) {
-                    port2 = 6000;
-                }
+
                 ConnectionUserData data = new ConnectionUserData(
-                        s_user, s_pass, s_ip, port2
+                        s_user, s_pass
                 );
-                Toast.makeText(getContext(), "Hola " + s_user + " " + s_pass + " " + s_ip + ":" + s_port, Toast.LENGTH_LONG).show();
+               // Toast.makeText(getContext(), "Hola " + s_user + " " + s_pass + " //" + s_ip + ":" + s_port, Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Hola " + s_user + " " + s_pass + " ", Toast.LENGTH_LONG).show();
+
 
                 TareaAutentica tarea = new TareaAutentica();
                 tarea.execute(data);

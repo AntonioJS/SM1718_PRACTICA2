@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
  //Poniendo parámetros, aun no adaptado a nuestra practica.
         EDITTTEXT = (EditText) findViewById(R.id.editText_login_user);
         EDITTTEXT = (EditText) findViewById(R.id.editText_login_pass);
-        EDITTTEXT = (EditText) findViewById(R.id.editText_login_ip);
-        EDITTTEXT = (EditText) findViewById(R.id.editText_login_port);
+       // EDITTTEXT = (EditText) findViewById(R.id.editText_login_ip);
+        //EDITTTEXT = (EditText) findViewById(R.id.editText_login_port);
 
     }
 

@@ -9,10 +9,10 @@ public class ConnectionUserData extends PersonalData {
     protected String connectionIP="127.0.0.1";
     protected short connectionPort=6000;
 
-    public ConnectionUserData(String user,String pass,String ip,short port){
+    public ConnectionUserData(String user, String pass){
         super(user,pass);
-        this.connectionIP=ip;
-        this.connectionPort=port;
+       // this.connectionIP=ip;
+        //this.connectionPort=port;
     }
 
     public String getConnectionIP() {
